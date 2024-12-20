@@ -90,7 +90,7 @@ resource "aws_instance" "server" {
     sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
     sudo yum upgrade -y
     sudo yum install jenkins -y
-    sudo systemctl daemon-reload
+  
     sudo systemctl start jenkins
     EOF
   tags = {
